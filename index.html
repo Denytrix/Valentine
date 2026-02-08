@@ -192,6 +192,239 @@
     const message = document.getElementById("message");
     const yesBtn = document.getElementById("yesBtn");
     const funnyImg = document.getElementById("funnyImg");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Evelyn ❤️</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: #fff0f5;
+    }
+
+    .box {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      width: 350px;
+    }
+
+    h1 {
+      color: #e6005c;
+      font-size: 24px;
+      margin-bottom: 25px;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 10px;
+      transition: all 0.3s ease;
+    }
+
+    #yesBtn {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    #noBtn {
+      background: #ccc;
+      color: black;
+    }
+
+    #romanticText {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #b30047;
+    }
+
+    #loveImg {
+      display: none;
+      margin-top: 20px;
+      width: 100%;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h1>Evelyn 💖<br>Do you want to be my Valentine?</h1>
+
+    <button id="yesBtn">YES ❤️</button>
+    <button id="noBtn">NO 😅</button>
+
+    <div id="romanticText"></div>
+
+    <img id="loveImg"
+      src="https://images.unsplash.com/photo-1517841905240-472988babdf9"
+      alt="Love">
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+    const yesBtn = document.getElementById("yesBtn");
+    const romanticText = document.getElementById("romanticText");
+    const loveImg = document.getElementById("loveImg");
+
+    let size = 1;
+
+    noBtn.addEventListener("click", () => {
+      size -= 0.25;
+      noBtn.style.transform = `scale(${size})`;
+
+      if (size <= 0.2) {
+        noBtn.style.display = "none";
+        romanticText.textContent = "Looks like YES is destiny 💕";
+      }
+    });
+
+    yesBtn.addEventListener("click", () => {
+      document.querySelector("h1").innerHTML =
+        "Evelyn 💕<br>You just made my heart smile";
+      romanticText.textConten<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Evelyn ❤️</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: #fff0f5;
+    }
+
+    .box {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      width: 350px;
+    }
+
+    h1 {
+      color: #e6005c;
+      font-size: 24px;
+      margin-bottom: 25px;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 10px;
+      transition: all 0.3s ease;
+    }
+
+    #yesBtn {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    #noBtn {
+      background: #ccc;
+      color: black;
+    }
+
+    #romanticText {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #b30047;
+    }
+
+    #loveImg {
+      display: none;
+      margin-top: 20px;
+      width: 100%;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h1>Evelyn 💖<br>Do you want to be my Valentine?</h1>
+
+    <button id="yesBtn">YES ❤️</button>
+    <button id="noBtn">NO 😅</button>
+
+    <div id="romanticText"></div>
+
+    <img id="loveImg"
+      src="https://images.unsplash.com/photo-1517841905240-472988babdf9"
+      alt="Love">
+  </div>
+
+  <!-- Romantic background music -->
+  <audio id="bgMusic" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+    const yesBtn = document.getElementById("yesBtn");
+    const romanticText = document.getElementById("romanticText");
+    const loveImg = document.getElementById("loveImg");
+    const bgMusic = document.getElementById("bgMusic");
+
+    let size = 1;
+
+    noBtn.addEventListener("click", () => {
+      size -= 0.25;
+      noBtn.style.transform = `scale(${size})`;
+
+      if (size <= 0.2) {
+        noBtn.style.display = "none";
+        romanticText.textContent = "Looks like YES is destiny 💕";
+      }
+    });
+
+    yesBtn.addEventListener("click", () => {
+      document.querySelector("h1").innerHTML =
+        "Evelyn 💕<br>You just made my heart smile";
+      romanticText.textContent =
+        "Every moment feels warmer knowing you said yes ❤️";
+
+      loveImg.style.display = "block";
+      yesBtn.style.display = "none";
+      noBtn.style.display = "none";
+
+      bgMusic.play(); // 🎶 start romantic music
+    });
+  </script>
+
+</body>
+</html>
+t =
+        "Every moment feels warmer knowing you said yes ❤️";
+      loveImg.style.display = "block";
+      yesBtn.style.display = "none";
+      noBtn.style.display = "none";
+    });
+  </script>
+
+</body>
+</html>
 
     noBtn.addEventListener("mouseover", () => {
       const x = Math.random() * (window.innerWidth - 100);
