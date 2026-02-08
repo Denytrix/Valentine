@@ -2,62 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Valentine 💖</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #ffebf0;
-      text-align: center;
-      padding-top: 80px;
-    }
-
-    h1 {
-      color: #e6005c;
-    }
-
-    button {
-      padding: 15px 25px;
-      font-size: 18px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      margin: 10px;
-    }
-
-    #yesBtn {
-      background-color: #28a745;
-      color: white;
-    }
-
-    #noBtn {
-      background-color: #dc3545;
-      color: white;
-      position: absolute;
-    }
-
-    #message {
-      font-size: 20px;
-      color: red;
-      margin-top: 20px;
-    }
-
-    #funnyImg {
-      display: none;
-      margin-top: 30px;
-      width: 300px;
-    }
-  </style>
-</head>
-<body>
-
-  <h1>Will you be my Valentine? 💕</h1>
-
-  <button id="yesBtn">YES 😍</button>
-  <button id="noBtn"<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Evelyn 💖</title>
+  <title>For Evelyn ❤️</title>
 
   <style>
     body {
@@ -66,156 +11,17 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      font-family: Arial, sans-serif;
       background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    .card {
-      background: white;
-      padding: 40px;
-      border-radius: 20px;
-      text-align: center;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-      max-width: 400px;
-      animation: pop 1s ease;
-    }
-
-    @keyframes pop {
-      from { transform: scale(0.8); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-
-    h1 {
-      color: #e6005c;
-      margin-bottom: 30px;
-    }
-
-    button {
-      padding: 15px 30px;
-      font-size: 18px;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      margin: 10px;
-    }
-
-    #yesBtn {
-      background-color: #ff3366;
-      color: white;
-    }
-
-    #yesBtn:hover {
-      transform: scale(1.1);
-    }
-
-    #noBtn {
-      background-color: #aaa;
-      color: white;
-    }
-
-    #message {
-      margin-top: 20px;
-      font-size: 18px;
-      color: #cc0000;
-    }
-
-    #romanticImg {
-      display: none;
-      margin-top: 25px;
-      width: 100%;
-      border-radius: 15px;
-      animation: fadeIn 1.5s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-  </style>
-</head>
-<body>
-
-  <div class="card">
-    <h1>Evelyn 💕<br>Will you be my Valentine?</h1>
-
-    <button id="yesBtn">YES ❤️</button>
-    <button id="noBtn">NO 🙃</button>
-
-    <div id="message"></div>
-
-    <img id="romanticImg"
-      src="https://images.unsplash.com/photo-1520975693410-0015c6bdf39b"
-      alt="Romantic moment">
-  </div>
-
-  <script>
-    const noBtn = document.getElementById("noBtn");
-    const yesBtn = document.getElementById("yesBtn");
-    const message = document.getElementById("message");
-    const romanticImg = document.getElementById("romanticImg");
-
-    let scale = 1;
-
-    noBtn.addEventListener("click", () => {
-      scale -= 0.3;
-      noBtn.style.transform = `scale(${scale})`;
-      message.textContent = "Hmm… think again 😌";
-
-      if (scale <= 0.2) {
-        noBtn.style.display = "none";
-        message.textContent = "Looks like YES is the only option now 😏❤️";
-      }
-    });
-
-    yesBtn.addEventListener("click", () => {
-      document.querySelector("h1").innerHTML = "Yaaay Evelyn 💖<br>You just made my day!";
-      romanticImg.style.display = "block";
-      message.textContent = "";
-      yesBtn.style.display = "none";
-      noBtn.style.display = "none";
-    });
-  </script>
-
-</body>
-</html>
->NO 🙄</button>
-
-  <div id="message"></div>
-
-  <img id="funnyImg" 
-       src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" 
-       alt="Funny Love GIF">
-
-  <script>
-    const noBtn = document.getElementById("noBtn");
-    const message = document.getElementById("message");
-    const yesBtn = document.getElementById("yesBtn");
-    const funnyImg = document.getElementById("funnyImg");
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>For Evelyn ❤️</title>
-
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: Arial, sans-serif;
-      background: #fff0f5;
     }
 
     .box {
       background: white;
       padding: 40px;
-      border-radius: 16px;
+      border-radius: 18px;
       text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-      width: 350px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+      width: 360px;
     }
 
     h1 {
@@ -225,7 +31,7 @@
     }
 
     button {
-      padding: 12px 24px;
+      padding: 12px 26px;
       font-size: 18px;
       border: none;
       border-radius: 8px;
@@ -245,7 +51,7 @@
     }
 
     #romanticText {
-      margin-top: 20px;
+      margin-top: 18px;
       font-size: 18px;
       color: #b30047;
     }
@@ -254,7 +60,7 @@
       display: none;
       margin-top: 20px;
       width: 100%;
-      border-radius: 12px;
+      border-radius: 14px;
     }
   </style>
 </head>
@@ -273,109 +79,7 @@
       alt="Love">
   </div>
 
-  <script>
-    const noBtn = document.getElementById("noBtn");
-    const yesBtn = document.getElementById("yesBtn");
-    const romanticText = document.getElementById("romanticText");
-    const loveImg = document.getElementById("loveImg");
-
-    let size = 1;
-
-    noBtn.addEventListener("click", () => {
-      size -= 0.25;
-      noBtn.style.transform = `scale(${size})`;
-
-      if (size <= 0.2) {
-        noBtn.style.display = "none";
-        romanticText.textContent = "Looks like YES is destiny 💕";
-      }
-    });
-
-    yesBtn.addEventListener("click", () => {
-      document.querySelector("h1").innerHTML =
-        "Evelyn 💕<br>You just made my heart smile";
-      romanticText.textConten<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>For Evelyn ❤️</title>
-
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: Arial, sans-serif;
-      background: #fff0f5;
-    }
-
-    .box {
-      background: white;
-      padding: 40px;
-      border-radius: 16px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-      width: 350px;
-    }
-
-    h1 {
-      color: #e6005c;
-      font-size: 24px;
-      margin-bottom: 25px;
-    }
-
-    button {
-      padding: 12px 24px;
-      font-size: 18px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      margin: 10px;
-      transition: all 0.3s ease;
-    }
-
-    #yesBtn {
-      background: #ff4d6d;
-      color: white;
-    }
-
-    #noBtn {
-      background: #ccc;
-      color: black;
-    }
-
-    #romanticText {
-      margin-top: 20px;
-      font-size: 18px;
-      color: #b30047;
-    }
-
-    #loveImg {
-      display: none;
-      margin-top: 20px;
-      width: 100%;
-      border-radius: 12px;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="box">
-    <h1>Evelyn 💖<br>Do you want to be my Valentine?</h1>
-
-    <button id="yesBtn">YES ❤️</button>
-    <button id="noBtn">NO 😅</button>
-
-    <div id="romanticText"></div>
-
-    <img id="loveImg"
-      src="https://images.unsplash.com/photo-1517841905240-472988babdf9"
-      alt="Love">
-  </div>
-
-  <!-- Romantic background music -->
+  <!-- Romantic music -->
   <audio id="bgMusic" loop>
     <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
   </audio>
@@ -409,37 +113,7 @@
       yesBtn.style.display = "none";
       noBtn.style.display = "none";
 
-      bgMusic.play(); // 🎶 start romantic music
-    });
-  </script>
-
-</body>
-</html>
-t =
-        "Every moment feels warmer knowing you said yes ❤️";
-      loveImg.style.display = "block";
-      yesBtn.style.display = "none";
-      noBtn.style.display = "none";
-    });
-  </script>
-
-</body>
-</html>
-
-    noBtn.addEventListener("mouseover", () => {
-      const x = Math.random() * (window.innerWidth - 100);
-      const y = Math.random() * (window.innerHeight - 100);
-      noBtn.style.left = x + "px";
-      noBtn.style.top = y + "px";
-      message.textContent = "Don’t do that 😭😭";
-    });
-
-    yesBtn.addEventListener("click", () => {
-      document.querySelector("h1").textContent = "Yaaay 💖😂";
-      funnyImg.style.display = "block";
-      message.textContent = "";
-      noBtn.style.display = "none";
-      yesBtn.style.display = "none";
+      bgMusic.play();
     });
   </script>
 
