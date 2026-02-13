@@ -1,121 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>For Evelyn ❤️</title>
+<meta charset="UTF-8">
+<title>For Evelyn ❤️</title>
 
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-    }
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+  }
 
-    .box {
-      background: white;
-      padding: 40px;
-      border-radius: 18px;
-      text-align: center;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.2);
-      width: 360px;
-    }
+  .container {
+    position: relative;
+  }
 
-    h1 {
-      color: #e6005c;
-      font-size: 24px;
-      margin-bottom: 25px;
-    }
+  h1 {
+    color: #b30059;
+    font-size: 32px;
+    margin-bottom: 25px;
+  }
 
-    button {
-      padding: 12px 26px;
-      font-size: 18px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      margin: 10px;
-      transition: all 0.3s ease;
-    }
+  button {
+    padding: 14px 28px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.3s;
+  }
 
-    #yesBtn {
-      background: #ff4d6d;
-      color: white;
-    }
+  #yesBtn {
+    background: #ff4d6d;
+    color: white;
+  }
 
-    #noBtn {
-      background: #ccc;
-      color: black;
-    }
+  #yesBtn:hover {
+    transform: scale(1.1);
+  }
 
-    #romanticText {
-      margin-top: 18px;
-      font-size: 18px;
-      color: #b30047;
-    }
+  #noBtn {
+    background: #cccccc;
+    position: absolute;
+  }
 
-    #loveImg {
-      display: none;
-      margin-top: 20px;
-      width: 100%;
-      border-radius: 14px;
-    }
-  </style>
+  /* Pumping heart */
+  #heart {
+    font-size: 170px;
+    margin-top: 20px;
+    animation: pump 1s infinite;
+    display: none;
+  }
+
+  @keyframes pump {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+  }
+
+  #romanticText {
+    font-size: 24px;
+    color: #800040;
+    margin-top: 15px;
+    display: none;
+  }
+
+</style>
 </head>
+
 <body>
 
-  <div class="box">
-    <h1>Evelyn 💖<br>Do you want to be my Valentine?</h1>
+<div class="container">
+  <h1>Evelyn 💕<br>Will you be my Valentine?</h1>
 
-    <button id="yesBtn">YES ❤️</button>
-    <button id="noBtn">NO 😅</button>
+  <button id="yesBtn">YES ❤️</button>
+  <button id="noBtn">NO 🙈</button>
 
-    <div id="romanticText"></div>
-
-    <img id="loveImg"
-      src="https://images.unsplash.com/photo-1517841905240-472988babdf9"
-      alt="Love">
+  <div id="heart">❤️</div>
+  <div id="romanticText">
+    Evelyn, my heart beats only for you 💖<br>
+    You just made my world brighter ✨
   </div>
+</div>
 
-  <!-- Romantic music -->
-  <audio id="bgMusic" loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
-  </audio>
+<!-- Romantic music -->
+<audio id="music" loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mp3">
+</audio>
 
-  <script>
-    const noBtn = document.getElementById("noBtn");
-    const yesBtn = document.getElementById("yesBtn");
-    const romanticText = document.getElementById("romanticText");
-    const loveImg = document.getElementById("loveImg");
-    const bgMusic = document.getElementById("bgMusic");
+<script>
+  const yesBtn = document.getElementById("yesBtn");
+  const noBtn = document.getElementById("noBtn");
+  const heart = document.getElementById("heart");
+  const text = document.getElementById("romanticText");
+  const music = document.getElementById("music");
 
-    let size = 1;
+  // Make NO button run away
+  noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+  });
 
-    noBtn.addEventListener("click", () => {
-      size -= 0.25;
-      noBtn.style.transform = `scale(${size})`;
+  // YES button
+  yesBtn.addEventListener("click", () => {
+    yesBtn.style.display = "none";
+    noBtn.style.display = "none";
 
-      if (size <= 0.2) {
-        noBtn.style.display = "none";
-        romanticText.textContent = "Looks like YES is destiny 💕";
-      }
-    });
+    heart.style.display = "block";
+    text.style.display = "block";
 
-    yesBtn.addEventListener("click", () => {
-      document.querySelector("h1").innerHTML =
-        "Evelyn 💕<br>You just made my heart smile";
-      romanticText.textContent =
-        "Every moment feels warmer knowing you said yes ❤️";
-
-      loveImg.style.display = "block";
-      yesBtn.style.display = "none";
-      noBtn.style.display = "none";
-
-      bgMusic.play();
-    });
-  </script>
+    music.play();
+  });
+</script>
 
 </body>
 </html>
