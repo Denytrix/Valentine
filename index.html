@@ -72,6 +72,14 @@
     display: none;
   }
 
+  #teddy {
+    width: 250px;
+    margin-top: 15px;
+    display: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+
 </style>
 </head>
 
@@ -84,10 +92,16 @@
   <button id="noBtn">NO 🙈</button>
 
   <div id="heart">❤️</div>
+
   <div id="romanticText">
     Evelyn, my heart beats only for you 💖<br>
-    You just made my world brighter ✨
+    You make my world sweeter every day 🧸✨
   </div>
+
+  <!-- Romantic Teddy Bears Hugging -->
+  <img id="teddy"
+    src="https://images.unsplash.com/photo-1601758123927-196c5b7b8c26"
+    alt="Romantic Teddy Bears">
 </div>
 
 <!-- Romantic music -->
@@ -100,9 +114,10 @@
   const noBtn = document.getElementById("noBtn");
   const heart = document.getElementById("heart");
   const text = document.getElementById("romanticText");
+  const teddy = document.getElementById("teddy");
   const music = document.getElementById("music");
 
-  // Make NO button run away
+  // NO button runs around
   noBtn.addEventListener("mouseover", () => {
     const x = Math.random() * (window.innerWidth - 100);
     const y = Math.random() * (window.innerHeight - 50);
@@ -117,6 +132,7 @@
 
     heart.style.display = "block";
     text.style.display = "block";
+    teddy.style.display = "block";
 
     music.play();
   });
